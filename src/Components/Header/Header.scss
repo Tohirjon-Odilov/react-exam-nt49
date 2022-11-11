@@ -1,0 +1,266 @@
+.header {
+  width: 100%;
+}
+
+.main {
+  max-width: 1280px;
+  padding: 1rem 2rem;
+  margin: 0 auto;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  height: 58.24px;
+  background-color: #fff;
+  z-index: 100;
+
+  .header {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .header-left {
+      .left__img {
+        width: 209.24px;
+        height: 58.24px;
+        cursor: pointer;
+      }
+    }
+
+    .header-middle {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 30px;
+
+      a {
+        font-family: "Roboto Mono";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 21px;
+        color: #9a9a9a;
+
+        &:hover {
+          color: #3d3d3d;
+          text-decoration: underline;
+        }
+
+        &:active {
+          color: #3d3d3d;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  // nav-right
+  .nav-right {
+    display: flex;
+    width: 256px;
+    height: 40px;
+    input {
+      padding: 10px;
+      border-radius: 3px 0px 0px 3px;
+    }
+
+    button {
+      background-color: #ffba9d;
+      font-size: 18px;
+      padding: 10px;
+      border-radius: 0px 3px 3px 0px;
+    }
+  }
+}
+
+// nav .close__btn {
+//   visibility: hidden;
+//   opacity: 0;
+// }
+// nav .bar__btn {
+//   visibility: hidden;
+//   opacity: 0;
+// }
+
+@media only screen and (max-width: 930px) {
+  nav {
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    gap: 30px;
+    .header {
+      width: 70%;
+      .header-left {
+        width: 15%;
+        .left__img {
+          max-width: 180px;
+          height: 50px;
+        }
+      }
+      .header-middle {
+        width: 60%;
+        a {
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
+    }
+
+    // nav-right
+    .nav-right {
+      display: flex;
+      button {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  nav {
+    background-color: #fff;
+
+    .header {
+      width: 100%;
+      .header-left {
+        width: 10%;
+        .left__img {
+          width: 130px;
+          height: 40px;
+        }
+      }
+      .header-middle {
+        width: 65%;
+        a {
+          font-size: 12px;
+          line-height: 12px;
+        }
+      }
+    }
+
+    // nav-right
+    .nav-right {
+      display: flex;
+    }
+  }
+}
+.close__btn,
+.bar__btn {
+  display: none !important;
+}
+@media only screen and (max-width: 740px) {
+  nav {
+    position: relative;
+    display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    width: 100%;
+    background-color: #fff;
+
+    // gap: 20px;
+    .header {
+      width: 100%;
+      display: flex;
+      // align-items: center;
+      // justify-content: space-between;
+
+      .header-left {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        .left__img {
+          width: 100%;
+          height: 50px;
+        }
+      }
+      .header-middle {
+        position: absolute;
+        margin-top: 120px;
+        width: 100%;
+        display: flex;
+        // flex-direction: row;
+        justify-content: space-around;
+        // gap: 30px;
+        a {
+          font-size: 14px;
+          line-height: 16px;
+          text-align: center;
+        }
+      }
+    }
+    .nav-right {
+      width: 100%;
+      input {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .header-middle {
+    display: none !important;
+  }
+  nav {
+    position: relative;
+    background-color: #fff;
+
+    .header {
+      width: 100%;
+
+      .header-left {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+      .header-middle {
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        height: 120vh;
+        z-index: 10;
+        margin: 0;
+        margin-top: 560px;
+        padding: 0;
+        padding-bottom: 170px;
+
+        .close__btn {
+          font-size: 24px;
+          align-self: flex-end;
+          margin-top: 25px;
+        }
+
+        a {
+          font-size: 16px;
+          line-height: 18px;
+        }
+      }
+    }
+    .nav-right {
+      position: absolute;
+      width: 100%;
+      margin-top: 130px;
+
+      input {
+        flex-grow: 1;
+      }
+    }
+    .close__btn,
+    .bar__btn {
+      display: block !important;
+    }
+    .responsive {
+      display: flex !important;
+    }
+  }
+}
