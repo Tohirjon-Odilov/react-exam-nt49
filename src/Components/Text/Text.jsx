@@ -70,10 +70,10 @@ const Text = ({ searchFilter }) => {
                     else if (value.title.toLowerCase().includes(searchFilter.toLowerCase())) {
                         return value;
                     }
-                }).map((item) => {
+                }).map((item, index) => {
                     const { id, createdAt, title, description } = item;
                     return (
-                        <Link to={`${id}`} onClick={() => navigate(`/${url}/${id}`)} className="content__card" key={id}>
+                        <Link to={`${index}`} onClick={() => navigate(`/${url}/${index}`)} className="content__card" key={id}>
                             <div className="span__text">
                                 <span>September <time>{`${dayjs(posts.createdAt).format('MMMM DD.YYYY')}`}</time> </span>
                                 <span>{url}</span>

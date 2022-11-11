@@ -6,16 +6,9 @@ import Header from '../Header/Header';
 import Error from '../Error/Error';
 import Logout from '../Logout/Logout';
 import Single from '../Single/Single';
-import { useSelector } from 'react-redux';
-
-
 
 const App = () => {
     const navigate = useNavigate()
-
-
-
-
     useEffect(() => {
         if (!localStorage.getItem('token')) {
             navigate('/login')
